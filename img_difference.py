@@ -1,3 +1,6 @@
+#!/usr/bin/python
+
+import sys
 import numpy as np
 import cv2
 # from matplotlib import pyplot as plt
@@ -5,11 +8,23 @@ import matplotlib.pyplot as plt
 import cv2
 import copy
 
-# sourceTxt = "sourceToto.png"
-# modifTxt = "toto1.png"
-sourceTxt = "IAsource.jpg"
-modifTxt = "IAv1.jpg"
-th = 10 # threshold value used when mask is calculted
+print 'Number of arguments:', len(sys.argv), 'arguments.'
+print 'Argument List:', str(sys.argv)
+
+# Iitialisation
+sourceTxt = str(sys.argv[1])
+modifTxt = str(sys.argv[2])
+th = 10 # threshold value used when mask is calculted (default value)
+if (len(sys.argv)>3):
+    th = int(sys.argv[3])
+
+# Display parameter
+print("--- "+str(sys.argv[0])+" ---")
+print("     source image : "+sourceTxt)
+print("     modified image : "+modifTxt)
+print("     threshold : "+str(th))
+print("------")
+
 
 imgColor = cv2.IMREAD_COLOR # Set flag to tell openCV to read image in color
 
