@@ -5,6 +5,8 @@ A simple python script to compare two picture
 python img_difference.py <sourceImage> <modifiedImage> <Treshold (optional | default 10)>
 </pre>
 
+##### **!! Warning !!** sourceImage and modifiedImage should have the same resolution
+
 In this example :
 <pre>
 python img_difference.py IAsource.jpg IAv1.jpg
